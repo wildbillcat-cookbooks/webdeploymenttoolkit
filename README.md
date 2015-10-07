@@ -1,6 +1,6 @@
-Windows Deployment Toolkit Cookbook
+Windows Web Deployment Toolkit Cookbook
 ===================================
-Provides a set of Windows-specific primitives (Chef resources) meant to aid in the creation of cookbooks/recipes targeting the Windows platform.
+Provides a set of Windows-specific primitives (Chef resources) meant to aid in the creation of cookbooks/recipes for .net applications targeting the Windows platform.
 
 ## Cookbooks
 
@@ -14,7 +14,7 @@ Resource/Provider
 
 ### web_deploy
 
-Installs a Web Deploy Package into the IIS Server from a file, and performs any operations specified by the package.  
+Not idempotent. Executes MsDeploy to sync packages, change settings, load packages into the IIS Server from a file, and performs any operations specified by the package.  
 See the following links for MSDN Documentation on it's use.  
 Web Deploy Operations: https://technet.microsoft.com/en-us/library/dd568989%28v=ws.10%29.aspx  
 Web Deploy Providers: https://technet.microsoft.com/en-us/library/dd569040%28v=ws.10%29.aspx  
