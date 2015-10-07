@@ -5,9 +5,16 @@ driver:
 provisioner:
   name: chef_zero
 
+verifier:
+  name: pester
+
 platforms:
-  - name: ubuntu-12.04
-  - name: centos-6.5
+  - name: win-2012r2-standard-amd64-nocm
+    transport:
+      name: winrm
+    driver_config:
+      box:  opentable/win-2012r2-standard-amd64-nocm
+      gui: true
 
 suites:
   - name: default
