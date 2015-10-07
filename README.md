@@ -6,8 +6,7 @@ Provides a set of Windows-specific primitives (Chef resources) meant to aid in t
 
 Attributes
 ----------
-* `node['windows']['allow_pending_reboots']` - used to configure the `WindowsRebootHandler` (via the `windows::reboot_handler` recipe) to act on pending reboots. default is true (ie act on pending reboots).  The value of this attribute only has an effect if the `windows::reboot_handler` is in a node's run list.
-* `node['windows']['allow_reboot_on_failure']` - used to register the `WindowsRebootHandler` (via the `windows::reboot_handler` recipe) as an exception handler too to act on reboots not only at the end of successful Chef runs, but even at the end of failed runs. default is false (ie reboot only after successful runs).  The value of this attribute only has an effect if the `windows::reboot_handler` is in a node's run list.
+* `node['webdeploymenttoolkit']['WebDeployExe']` - used to execute the msdeploy.exe. default is %programfiles%\IIS\Microsoft Web Deploy V2\msdeploy.exe.
 
 
 Resource/Provider

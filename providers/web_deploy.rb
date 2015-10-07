@@ -1,5 +1,5 @@
 action :sync do
-  msdeploy_cmd = "\"%programfiles%\\IIS\\Microsoft Web Deploy V2\\msdeploy.exe\" "
+  msdeploy_cmd = "#{node['webdeploymenttoolkit']['WebDeployExe']} "
   msdeploy_cmd << "-verb:sync "
   msdeploy_cmd << "-source:#{@new_resource.source} " unless @new_resource.source.nil?
   msdeploy_cmd << "-dest:#{@new_resource.dest} " unless @new_resource.dest.nil?
@@ -17,7 +17,7 @@ end
 
 #msdeploy -verb:delete -dest:apphostconfig="MySite/OldApp1"
 action :delete do
-  msdeploy_cmd = "\"%programfiles%\\IIS\\Microsoft Web Deploy V2\\msdeploy.exe\" "
+  msdeploy_cmd = "#{node['webdeploymenttoolkit']['WebDeployExe']} "
   msdeploy_cmd << "-verb:delete "
   msdeploy_cmd << "-dest:#{@new_resource.dest} " unless @new_resource.dest.nil?
 
@@ -30,7 +30,7 @@ end
 
 #msdeploy –verb:dump –source:appHostConfig="Default Web Site" -xml
 action :dump do
-  msdeploy_cmd = "\"%programfiles%\\IIS\\Microsoft Web Deploy V2\\msdeploy.exe\" "
+  msdeploy_cmd = "#{node['webdeploymenttoolkit']['WebDeployExe']} "
   msdeploy_cmd << "-verb:dump "
   msdeploy_cmd << "-source:#{@new_resource.source} " unless @new_resource.source.nil?
   msdeploy_cmd << "-xml "
@@ -45,7 +45,7 @@ end
 
 #msdeploy -verb:getDependencies -source:webServer
 action :getDependencies do
-  msdeploy_cmd = "\"%programfiles%\\IIS\\Microsoft Web Deploy V2\\msdeploy.exe\" "
+  msdeploy_cmd = "#{node['webdeploymenttoolkit']['WebDeployExe']} "
   msdeploy_cmd << "-verb:getDependencies "
   msdeploy_cmd << "-source:#{@new_resource.source} " unless @new_resource.source.nil?
   msdeploy_cmd << ">> #{@new_resource.dest} " unless @new_resource.dest.nil?
@@ -59,7 +59,7 @@ end
 
 #msdeploy -verb:getsysteminfo -source:webServer
 action :getSystemInfo do
-  msdeploy_cmd = "\"%programfiles%\\IIS\\Microsoft Web Deploy V2\\msdeploy.exe\" "
+  msdeploy_cmd = "#{node['webdeploymenttoolkit']['WebDeployExe']} "
   msdeploy_cmd << "-verb:getsysteminfo "
   msdeploy_cmd << "-source:#{@new_resource.source} " unless @new_resource.source.nil?
   msdeploy_cmd << ">> #{@new_resource.dest} " unless @new_resource.dest.nil?
