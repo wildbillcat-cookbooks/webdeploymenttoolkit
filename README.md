@@ -2,7 +2,20 @@ Windows Web Deployment Toolkit Cookbook
 ===================================
 Provides a set of Windows-specific primitives (Chef resources) meant to aid in the creation of cookbooks/recipes for .net applications targeting the Windows platform.
 
-## Cookbooks
+Requirements
+-------------
+Version 1.3.0+ of this cookbook requires Chef 0.10.10+.
+
+
+### Tested Platforms
+* Windows Server 2012 (R2)
+  
+  
+### Cookbooks
+The following cookbooks provided by Chef Software are required as noted:
+
+* webpi (`webdeploymenttoolkit::default` leverages the webpi_product LWRP)
+
 
 Attributes
 ----------

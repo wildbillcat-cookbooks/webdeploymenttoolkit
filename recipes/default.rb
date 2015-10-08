@@ -2,4 +2,10 @@
 # Cookbook Name:: webdeploymenttoolkit
 # Recipe:: default
 #
-# Copyright (c) 2015 The Authors, All Rights Reserved.
+# Install MSDeploy through Microsoft Web Platform Installer
+include_recipe 'webpi'
+
+webpi_product 'WDeployNoSMO' do
+  accept_eula true
+  action :install
+end
