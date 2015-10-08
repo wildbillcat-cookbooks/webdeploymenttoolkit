@@ -4,8 +4,6 @@ Provides a set of Windows-specific primitives (Chef resources) meant to aid in t
 
 Requirements
 -------------
-Version 1.3.0+ of this cookbook requires Chef 0.10.10+.
-
 
 ### Tested Platforms
 * Windows Server 2012 (R2)
