@@ -1,4 +1,7 @@
-resource_name :web_deploy
+
+use_inline_resources
+
+provides :web_deploy
 
 action :sync do
   msdeploy_cmd = "#{node['webdeploymenttoolkit']['WebDeployExe']} "

@@ -1,4 +1,4 @@
-resource_name :web_deploy
+provides :web_deploy
 actions :sync, :delete, :dump, :getDependencies, :getSystemInfo
 default_action :sync
 
