@@ -1,3 +1,5 @@
+resource_name :web_deploy
+
 action :sync do
   msdeploy_cmd = "#{node['webdeploymenttoolkit']['WebDeployExe']} "
   msdeploy_cmd << "-verb:sync "
