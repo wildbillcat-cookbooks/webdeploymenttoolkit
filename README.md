@@ -17,7 +17,7 @@ The following cookbooks provided by Chef Software are required as noted:
 
 Attributes
 ----------
-* `node['webdeploymenttoolkit']['WebDeployExe']` - used to execute the msdeploy.exe. default is %programfiles%\IIS\Microsoft Web Deploy V2\msdeploy.exe.
+* `node['webdeploymenttoolkit']['WebDeployExe']` - used to execute the msdeploy.exe. default is %programfiles%\IIS\Microsoft Web Deploy V3\msdeploy.exe or %programfiles%\IIS\Microsoft Web Deploy V2\msdeploy.exe.
 
 
 Resource/Provider
