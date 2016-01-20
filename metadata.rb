@@ -4,7 +4,7 @@ maintainer_email 'kingrolloinc@sbcglobal.net'
 license 'The Unlicense'
 description 'Installs/Configures webdeploymenttoolkit'
 long_description 'Installs/Configures webdeploymenttoolkit'
-version '0.1.7'
+version '0.1.8'
 issues_url "https://github.com/wildbillcat-cookbooks/webdeploymenttoolkit/issues"
 source_url "https://github.com/wildbillcat-cookbooks/webdeploymenttoolkit"
 
