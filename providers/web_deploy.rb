@@ -8,10 +8,23 @@ action :sync do
   msdeploy_cmd << "-verb:sync "
   msdeploy_cmd << "-source:#{@new_resource.source} " unless @new_resource.source.nil?
   msdeploy_cmd << "-dest:#{@new_resource.dest} " unless @new_resource.dest.nil?
+  msdeploy_cmd << "-setParamFile:#{@new_resource.param_file} " unless @new_resource.param_file.nil?
 
   @new_resource.parameters.each do |name, value|
     msdeploy_cmd << "-setParam:name=\"#{name}\",value=\"#{value}\" "
   end unless @new_resource.parameters.nil?
+
+  @new_resource.skip.each do |attribute, value|
+    msdeploy_cmd << "-skip:#{attribute}=#{value} "
+  end unless @new_resource.skip.nil?
+
+  @new_resource.disable_link.each do |value|
+    msdeploy_cmd << "-disableLink:#{value} "
+  end unless @new_resource.disable_link.nil?
+
+  @new_resource.enable_rule.each do |value|
+    msdeploy_cmd << "-enableRule:#{value} "
+  end unless @new_resource.enable_rule.nil?
 
   Chef::Log.info("Execute MSDeploy Sync")
 
@@ -33,7 +46,7 @@ action :delete do
   end
 end
 
-#msdeploy –verb:dump –source:appHostConfig="Default Web Site" -xml
+#msdeploy ï¿½verb:dump ï¿½source:appHostConfig="Default Web Site" -xml
 action :dump do
   msdeploy_cmd = "#{node['webdeploymenttoolkit']['WebDeployExe']} "
   msdeploy_cmd << "-verb:dump "
