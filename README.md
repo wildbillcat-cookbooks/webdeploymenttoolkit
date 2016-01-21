@@ -41,6 +41,10 @@ Web Deploy Providers: https://technet.microsoft.com/en-us/library/dd569040%28v=w
 - source: name attribute. The source string as defined to a to the web deploy command line.
 - dest: the destination string as defined to a to the web deploy command line.
 - parameters: hash table of parameters and values that should be passed to msdeploy.
+- param_file: string path to a parameter file.
+- skip: array of values that should be passed to msdeploy's skip command.
+- disable_link: array values that should be passed to msdeploy's disableLink command.
+- enable_rule: array of values that should be passed to msdeploy's enableRule command.
 
 #### Examples
 ```ruby
