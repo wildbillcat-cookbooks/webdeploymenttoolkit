@@ -67,7 +67,7 @@ end
 # Deploy a Packaged Application with parameters
 web_deploy 'package=c:\packagedApp.zip' do
 	dest  'auto'
-    parameters  { "IIS Web Application Name" => "Default Web Site/app", "connectionString" => "Database=stuff;user=me;pass=thing" }
+    parameters  ({ "IIS Web Application Name" => "Default Web Site/app", "connectionString" => "Database=stuff;user=me;pass=thing" })
 	action  :sync
 end
 ```
