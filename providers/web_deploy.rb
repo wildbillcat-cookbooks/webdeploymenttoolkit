@@ -9,6 +9,8 @@ action :sync do
   msdeploy_cmd << "-source:#{@new_resource.source} " unless @new_resource.source.nil?
   msdeploy_cmd << "-dest:#{@new_resource.dest} " unless @new_resource.dest.nil?
   msdeploy_cmd << "-setParamFile:#{@new_resource.param_file} " unless @new_resource.param_file.nil?
+  msdeploy_cmd << "-postSync:#{@new_resource.post_sync} " unless @new_resource.post_sync.nil?
+  msdeploy_cmd << "-preSync:#{@new_resource.pre_sync} " unless @new_resource.pre_sync.nil?
 
   @new_resource.parameters.each do |name, value|
     msdeploy_cmd << "-setParam:name=\"#{name}\",value=\"#{value}\" "

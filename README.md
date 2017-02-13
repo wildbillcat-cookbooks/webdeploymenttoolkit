@@ -7,8 +7,8 @@ Requirements
 
 ### Tested Platforms
 * Windows Server 2012 (R2)
-  
-  
+
+
 ### Cookbooks
 The following cookbooks provided by Chef Software are required as noted:
 
@@ -25,10 +25,10 @@ Resource/Provider
 
 ### web_deploy
 
-Not idempotent. Executes MsDeploy to sync packages, change settings, load packages into the IIS Server from a file, and performs any operations specified by the package.  
-See the following links for MSDN Documentation on it's use.  
-Web Deploy Operations: https://technet.microsoft.com/en-us/library/dd568989%28v=ws.10%29.aspx  
-Web Deploy Providers: https://technet.microsoft.com/en-us/library/dd569040%28v=ws.10%29.aspx  
+Not idempotent. Executes MsDeploy to sync packages, change settings, load packages into the IIS Server from a file, and performs any operations specified by the package.
+See the following links for MSDN Documentation on it's use.
+Web Deploy Operations: https://technet.microsoft.com/en-us/library/dd568989%28v=ws.10%29.aspx
+Web Deploy Providers: https://technet.microsoft.com/en-us/library/dd569040%28v=ws.10%29.aspx
 
 #### Actions
 - :sync: Default. Syncs a deployment package to a target.
@@ -42,6 +42,8 @@ Web Deploy Providers: https://technet.microsoft.com/en-us/library/dd569040%28v=w
 - dest: the destination string as defined to a to the web deploy command line.
 - parameters: hash table of parameters and values that should be passed to msdeploy.
 - param_file: string path to a parameter file.
+- pre_sync: string to include a pre sync operation.
+- post_sync: string to include a post sync operation.
 - skip: array of values that should be passed to msdeploy's skip command.
 - disable_link: array values that should be passed to msdeploy's disableLink command.
 - enable_rule: array of values that should be passed to msdeploy's enableRule command.
