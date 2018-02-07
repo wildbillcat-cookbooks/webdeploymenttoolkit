@@ -1,13 +1,13 @@
 name 'webdeploymenttoolkit'
 maintainer 'Patrick McMorran'
 maintainer_email 'kingrolloinc@sbcglobal.net'
-license 'The Unlicense'
+license 'Unlicense'
 description 'Installs/Configures webdeploymenttoolkit'
 long_description 'Installs/Configures webdeploymenttoolkit'
 version '0.1.8'
-issues_url "https://github.com/wildbillcat-cookbooks/webdeploymenttoolkit/issues"
-source_url "https://github.com/wildbillcat-cookbooks/webdeploymenttoolkit"
+issues_url 'https://github.com/wildbillcat-cookbooks/webdeploymenttoolkit/issues'
+source_url 'https://github.com/wildbillcat-cookbooks/webdeploymenttoolkit'
 
-
-depends 'webpi', '~> 1.2.8'
-supports "windows"
+depends 'webpi'
+supports 'windows'
+chef_version '>= 12.7' if respond_to?(:chef_version)
